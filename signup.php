@@ -63,7 +63,7 @@
 				}
 			</script><br>
 			
-			<input type="submit" name="submit" value="Register"><br>
+			<input type="submit" name="submit" value="Registrarse"><br>
 			<a href="index.php">Ya tiene cuenta?</a>
 			
 
