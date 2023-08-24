@@ -22,7 +22,7 @@ $_SESSION['timer'] = null;
     <div class="container">
         <h1 class="title_paso2" id="title_paso2">Paso # 2</h1>
 
-        <form action="../PHP/pagos.php" method="POST">
+        <form action="PHP/receipt.php" method="POST">
 
             <div class="row">
 
@@ -86,7 +86,7 @@ $_SESSION['timer'] = null;
             </div>
             <a href="booking.php" name="regresar" value="regresar" class="regresar">Regresar</a>
 
-            <button type="submit" name="pagar" value="pagar" id="pagar" class="pagar">Pagar</button>
+            <center><a class='pay' href="receipt.php">Pagar <?php echo $amt;?></a> </center> 
         </form>
 
     </div>
