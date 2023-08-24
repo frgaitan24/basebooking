@@ -6,10 +6,12 @@ $_SESSION['timer'] = null;
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -27,11 +29,11 @@ $_SESSION['timer'] = null;
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="home.php">Home</a>
-                            </li>
-                            <!--  
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="home.php">Home</a>
+                                </li>
+                                <!--  
                             <li class="nav-item">
                                 <a class="nav-link" href="registro.html">Registrate</a>
                             </li>
@@ -40,7 +42,7 @@ $_SESSION['timer'] = null;
                             </li>
                             <li class="nav-item"> -->
                                 <a class="nav-link" href="booking.php">Boletos y asientos</a>
-                            </li>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="localidades.php">Localidades</a>
                                 </li>
@@ -51,13 +53,21 @@ $_SESSION['timer'] = null;
                                 <li class="nav-item">
                                     <a class="nav-link" href="reseñas.php">Reseñas</a>
                                 </li>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="informacion.php">Información</a>
-                            </li>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="informacion.php">Información</a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#ayuda">Ayuda</a>
                                 </li>
+                                <?php if (isset($_SESSION['name'])) { ?>
+				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
+						onclick="document.location.href='userlogout.php'">Salir</button></li>
+			<?php } else { ?>
+				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
+						onclick="document.location.href='index.php'">Loguearse</button></li>
+			<?php } ?>
+
                             </ul>
                         </div>
                     </nav>
@@ -66,4 +76,5 @@ $_SESSION['timer'] = null;
         </div>
     </header>
 </body>
+
 </html>
