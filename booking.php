@@ -8,8 +8,7 @@ session_start();
 	<title>Boletos y Asientos</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/receiptstyle.css">
-
-	<!--styles -->
+	
 	<style>
 		* {
 			margin: 0px;
@@ -68,7 +67,6 @@ session_start();
 			font-size: 18px;
 			background: #fff;
 
-			/* Center slide text vertically */
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: -webkit-flex;
