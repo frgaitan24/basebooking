@@ -2,7 +2,7 @@
 <?php
     include 'dbcon.php';
     session_start();
-	date_default_timezone_set('Asia/Kolkata');
+	date_default_timezone_set('America/Costa_Rica');
 if(isset($_SESSION['theatre_n']) && isset($_SESSION['timer']))
 	{
 	$time1=$_SESSION['timer'];
@@ -29,7 +29,7 @@ if(isset($_SESSION['theatre_n']) && isset($_SESSION['timer']))
 	else
 	{?>
 		<script>
-			alert("All seats booked,Select another show.");
+			alert("Los asientos ya fueron vendidos, seleccione otra película.");
 			window.location="booking.php";
 		</script>
 	<?php	
@@ -723,11 +723,6 @@ else{ header('location:booking.php');}
 		
 		 });
 				
-			
-		
-		
-        
-
  
     </script>
 

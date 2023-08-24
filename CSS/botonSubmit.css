@@ -1,0 +1,31 @@
+.btn_regresar{
+    background-color: aliceblue;
+    border: 0px;
+    padding: 5px;
+    margin-right: 50px;
+
+}
+
+.btn_siguiente{
+    background-color: aliceblue;
+    border: 0px;
+    padding: 5px;
+    margin-left: 130px;
+}
+
+
+.regresar{
+    background-color: aliceblue;
+    border: 0px;
+    padding: 5px;
+    margin-right: 50px;
+    font-size: 13px;
+}
+
+.pagar{
+    background-color: aliceblue;
+    border: 0px;
+    padding: 5px;
+    margin-left: 470px;
+    text-decoration: underline;
+}
