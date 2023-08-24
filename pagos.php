@@ -5,7 +5,7 @@ $usuario = "root";
 $clave = "";
 $basedatos = "cine";
 */
-$enlace = mysqli_connect("localhost", "root", "", "cinelitas");
+$enlace = mysqli_connect("localhost", "root", "Karaoke.10", "cinelitas");
 //$enlace = mysqli_connect($servidor, $usuario, $clave, $basedatos);
 
 //Verificar conexion
@@ -45,6 +45,6 @@ $query = "insert into formulario_pago (nombre, correo, direccion, ciudad, nombre
   }
   else {
     echo "datos insertados correctamente";
-    header("Location: ../HTML/menu.html");
+    header("Location:home.php");
   }
 ?>
