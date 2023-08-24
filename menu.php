@@ -29,7 +29,7 @@ $_SESSION['timer'] = null;
                             <ul class="navbar-nav">
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Index.html">Home</a>
+                                <a class="nav-link" href="home.php">Home</a>
                             </li>
                             <!--  
                             <li class="nav-item">
@@ -42,7 +42,7 @@ $_SESSION['timer'] = null;
                                 <a class="nav-link" href="booking.php">Boletos y asientos</a>
                             </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="localidades.php">Localizaciones</a>
+                                    <a class="nav-link" href="localidades.php">Localidades</a>
                                 </li>
                                 </li>
                                 <li class="nav-item">

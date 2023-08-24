@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #242333;
+    padding-top: 80px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 30px 0px;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+a{
+    color:#ffb92a;
+}
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px auto 45px auto;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#descripcion{
+    color: black;
+}
+
+.btn-añadir{
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    color: black;
+}
+
+.contenedor>div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #7a7a77; /*#9e9d97*/
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    flex-direction: column;
+    padding-top: 35px;
+    gap: 25px;
+    flex: 1 1 300px;
+}
+
+.contenedor>div>form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contenedor>div>form>input,
+select {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    color: black;
+    background-color: white;
+}
+option{
+    color: black;
+}
+
+.contenedor .button {
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 0.2rem;
+    text-align: right;
+    border: 3px solid #ccc;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: gray;
+  }

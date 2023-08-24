@@ -20,9 +20,6 @@ $_SESSION['timer'] = null;
 <body>
 <div class='navbar'>
 		<ul>
-
-			<li><a class="active" href="home.php">Home</a></li>
-
 			<?php if (isset($_SESSION['name'])) { ?>
 				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
 						onclick="document.location.href='userlogout.php'">Salir</button></li>
@@ -30,8 +27,6 @@ $_SESSION['timer'] = null;
 				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
 						onclick="document.location.href='index.php'">Loguearse</button></li>
 			<?php } ?>
-
-
 
 		</ul>
 	</div>
