@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const formData = new FormData();
       formData.append("review", reviewText.value);
 
-      fetch("../PHP/resenas.php", {
+      fetch("resenas.php", {
           method: "POST",
           body: formData
       })
