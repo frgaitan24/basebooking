@@ -137,7 +137,6 @@ else{ header('location:booking.php');}
     <div class="container">
 
         <div class="w3ls-reg">
-            <!-- input fields -->
             <div class="inputForm">
                 <div class="mr_agilemain">
                     <div class="agileits-right">
@@ -149,8 +148,6 @@ else{ header('location:booking.php');}
                 </div>
                 <button onclick="takeData()">Empezar a seleccionar</button>
             </div>
-            <!-- //input fields -->
-            <!-- seat availabilty list -->
             <ul class="seat_w3ls">
                 <li class="smallBox greenBox">Asiento vendidos</li>
 
@@ -158,8 +155,6 @@ else{ header('location:booking.php');}
 
                 <li class="smallBox emptyBox">Asientos vacíos</li>
             </ul>
-            <!-- seat availabilty list -->
-            <!-- seat layout -->
             <div class="seatStructure txt-center" style="overflow-x:auto;">
 			<form method="Post" >
                 <table id="seatsBlock">
@@ -608,8 +603,7 @@ else{ header('location:booking.php');}
             </div>            
         </div>
 	</div>
-<!-- //details after booking displayed here -->		
-  
+	
 	
 		<?php
 			if(isset($_POST['submit_seat']))
@@ -635,7 +629,6 @@ else{ header('location:booking.php');}
 
 					
 			?>
-            <!-- details after booking displayed here -->
 			<div id="display" class="pop-content pop">
 			<span class="close" onclick="document.getElementById('display').style.display='none'">&times;</span>
             <div class="displayerBoxes txt-center" style="overflow-x:auto;">
@@ -667,7 +660,7 @@ else{ header('location:booking.php');}
 					
                 </table>
 				
-				<center><a class='pay' href="receipt.php">Pagar <?php echo $amt;?></a> </center> 
+				<center><a class='pay' href="receipt.php">Reservar por un total de: <?php echo $amt;?> colones</a> </center> 
 				</form>
 				
             </div>
@@ -678,8 +671,6 @@ else{ header('location:booking.php');}
     
     <!-- js -->
     <script src="js/jquery-2.2.3.min.js"></script>
-    <!-- //js -->
-    <!-- script for seat selection -->
     <script>
 	
 

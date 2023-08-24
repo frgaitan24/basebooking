@@ -120,5 +120,3 @@ fetch('../PHP/menu_comidas.php', {
 .catch(err => console.error(err));
 });
 
-
-

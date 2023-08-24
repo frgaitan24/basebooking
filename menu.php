@@ -33,14 +33,6 @@ $_SESSION['timer'] = null;
                                 <li class="nav-item">
                                     <a class="nav-link" href="home.php">Home</a>
                                 </li>
-                                <!--  
-                            <li class="nav-item">
-                                <a class="nav-link" href="registro.html">Registrate</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="login.html">Iniciar Sesion</a>
-                            </li>
-                            <li class="nav-item"> -->
                                 <a class="nav-link" href="booking.php">Boletos y asientos</a>
                                 </li>
                                 <li class="nav-item">
@@ -51,14 +43,11 @@ $_SESSION['timer'] = null;
                                     <a class="nav-link" href="./HTML/menu_comidas.html">Comidas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="resenas.php">Reseñas</a>
+                                    <a class="nav-link" href="resenasmain.php">Reseñas</a>
                                 </li>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="informacion.php">Información</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#ayuda">Ayuda</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="userlogout.php">Salir</a>

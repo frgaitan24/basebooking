@@ -1,7 +1,7 @@
 <?php
 // Conectar a la base de datos (como en los ejemplos anteriores)
 
-$conn = new mysqli("localhost","root","", "cinelitas");
+$conn = new mysqli("localhost","root","Karaoke.10", "cinelitas");
 // Consultar las reseñas desde la base de datos
 $query = "SELECT * FROM resenas";
 $result = $conn->query($query);
