@@ -7,9 +7,9 @@ session_start();
 	<meta charset="utf-8">
 	<title>Boletos y Asientos</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/receiptstyle.css">
+
 	<!--styles -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/StyleIndex.css">
 	<style>
 		* {
 			margin: 0px;
@@ -209,8 +209,23 @@ session_start();
 	?>
 
 
-	<div class='navbar'></div>
-	<div id="menuContainer"></div>
+	<div class='navbar'>
+		<ul>
+
+			<li><a class="active" href="home.php">Atrás</a></li>
+
+			<?php if (isset($_SESSION['name'])) { ?>
+				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
+						onclick="document.location.href='userlogout.php'">Salir</button></li>
+			<?php } else { ?>
+				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
+						onclick="document.location.href='index.php'">Loguearse</button></li>
+			<?php } ?>
+
+
+
+		</ul>
+	</div>
 
 	<?php
 	include('dbcon.php');
@@ -360,9 +375,7 @@ session_start();
 		</form>
 
 	<?php } ?>
-	<div id="footerContainer"></div>
-    <script src="JS/menu.js"></script>
-    <script src="JS/footer.js"></script>
+
 </body>
 
 </html>

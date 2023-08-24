@@ -60,14 +60,9 @@ $_SESSION['timer'] = null;
                                 <li class="nav-item">
                                     <a class="nav-link" href="#ayuda">Ayuda</a>
                                 </li>
-                                <?php if (isset($_SESSION['name'])) { ?>
-				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
-						onclick="document.location.href='userlogout.php'">Salir</button></li>
-			<?php } else { ?>
-				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
-						onclick="document.location.href='index.php'">Loguearse</button></li>
-			<?php } ?>
-
+                                <li class="nav-item">
+                                    <a class="nav-link" href="userlogout.php">Salir</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>

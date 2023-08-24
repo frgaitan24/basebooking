@@ -64,7 +64,7 @@
 	
 }	
 
-body{background-color:#F5F5F5;}
+body{background-color:#e6af19;}
 .sign{
 		
 		border-radius:6px;
@@ -104,7 +104,7 @@ body{background-color:#F5F5F5;}
 	height:50px;
     list-style-type: none;
     overflow: hidden;
-    background-color: #0b243d;
+    background-color: #f0f2f4;
 }
 
 .navbar li a {
@@ -117,7 +117,7 @@ body{background-color:#F5F5F5;}
   font-size: 22px;
 }
 
-table{background-color:#230909;border-collapse: collapse;border: 1px solid black;}
+table{background-color:#f4f4f4;border-collapse: collapse;border: 1px solid black;}
 
 tr,td{padding:20px;text-align: left}
 

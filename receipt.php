@@ -39,10 +39,8 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 <head>
 	<title>Página de facturación</title>
 	<link rel="stylesheet" href="css/swiper.min.css">
-
 	<link rel="stylesheet" type="text/css" href="css/receiptstyle.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/StyleIndex.css">
+
 </head>
 
 <body onload="myFunction()">
@@ -61,8 +59,6 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
 						onclick="document.location.href='index.php'">Loguearse</button></li>
 			<?php } ?>
-
-
 
 		</ul>
 	</div>
