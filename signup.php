@@ -2,7 +2,7 @@
 	session_start();
 	
 	if(isset($_SESSION['name'])){
-		header('location:userdashboard.php');
+		header('location:home.php');
 	}
 
 ?>
@@ -24,7 +24,7 @@
 		
 	</div>
 	<div class="loginbox">
-		<img src="../images/profile.png" class="profile">
+		<img src="images/profile.png" class="profile">
 		
 		<h2>Registrese</h2>
 		
@@ -112,18 +112,18 @@
 				
 				?>
 				<script>
-				alert("Registered Successfully");
+				alert("Registrado exitosamente");
 				</script>
 				
 				<?php
-				header('location:userdashboard.php');
+				header('location:home.php');
 		
 			}
 			else
 			{
 			?>
 			<script>
-			alert("Password Not Match");
+			alert("Constraseñas no coinciden");
 			
 			</script>
 			<?php
@@ -136,7 +136,7 @@
 		{
 				?>
 				<script>
-				alert("Username Already Exist.Try other Username.");
+				alert("Usuario ya existe.Intente con otro.");
 				</script>
 				<?php
 	

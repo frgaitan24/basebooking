@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: white;
+    background-color: #1f2029;
+    overflow-x: hidden
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+header {
+    background-color: #e6af19;
+    padding: 25px 0;
+}
+
+.logo-img {
+    max-width: 50%;
+    height: auto;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+section {
+    padding: 25px 0;
+}
+
+#cartelera {
+    width: 95vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+.card {
+    transition: transform 0.3s ease-in-out;
+    border: #e6af19;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ajustar tamaño de las imágenes de las películas */
+.card-img-top {
+    width: 300px;
+    height: 400px;
+}
+
+/*
+.container {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc; 
+*/
+/* Establecer tamaño y color de los botones */
+.btn {
+    font-size: 10px;
+    padding: 5px 10px;
+    background-color: #e6af19;
+    color: black;
+    border:#1f2029;
+    border-radius: 8px;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+}
+
+/* Establecer color de texto negro y en negrita */
+.card-body h1, .card-body p {
+    color: black;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 5;
+    font-size: 10px;
+    text-align: center;
+}
+/* Ajustar tamaño del contenedor div.card al tamaño de la imagen */
+div.card {
+
+    width: 300px; 
+    height: 500px; 
+}
+
+/* Ajustar tamaño de fuente del título de la película */
+.card-body h5 {
+    font-size: 5px; /* Puedes ajustar el valor según el tamaño deseado */
+}
+/* Ajustar tamaño de fuente del título de la película */
+.card-body h5 {
+    font-size: 16px; /* Tamaño de fuente para el título de la película */
+}
+
+/* Centrar el contenido de la página */
+section#peliculas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+}
+
+/* Agregar espacio entre las tarjetas */
+.col-md-4 {
+    margin-bottom: 100px;
+}
+
+.c-1{
+    display: flex;
+    width: 600px; 
+    height: 430px;  
+}
+
+.c-1 img{
+   width: 0px;
+   flex-grow: 1;
+   opacity: .8;
+   transition: .5s ease; 
+}
+
+.c-1 img:hover{
+   cursor: crosshair;
+   width: 150px; 
+   opacity: 1;
+   filter: contrast(120%);
+}

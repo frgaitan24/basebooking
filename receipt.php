@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'dbcon.php';
-date_default_timezone_set('Asia/Kolkata');
+date_default_timezone_set('America/Costa_Rica');
 
 if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SESSION['timer'])) {
 	$theatre1 = $_SESSION['theatre_n'];
@@ -37,7 +37,7 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 <html>
 
 <head>
-	<title>Receipt Page</title>
+	<title>Página de facturación</title>
 	<link rel="stylesheet" href="css/swiper.min.css">
 
 	<link rel="stylesheet" type="text/css" href="css/receiptstyle.css">
@@ -49,23 +49,15 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 
 	<div class='navbar'>
 		<ul>
-			<li style="margin:0px;padding-left:5px;padding-right:2px;padding-top:0px;float:left;"><a
-					href="userdashboard.php"><img src="images/back.png" height="30px" width="30px"></a> </li>
-			<li><img src="images/logo.png"
-					style="padding-left:5px;padding-right:10px;padding-top:10px;float:left;height:35px;width:250px">
-			</li>
 
-
-			<li><a class="active" href="userdashboard.php">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<li><a class="active" href="home.php">Home</a></li>
 
 			<?php if (isset($_SESSION['name'])) { ?>
 				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
-						onclick="document.location.href='userlogout.php'">Logout</button></li>
+						onclick="document.location.href='userlogout.php'">Salir</button></li>
 			<?php } else { ?>
 				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
-						onclick="document.location.href='index.php'">Sign In</button></li>
+						onclick="document.location.href='index.php'">Loguearse</button></li>
 			<?php } ?>
 
 
@@ -77,17 +69,11 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 
 	<div style="display:none;" id="myDiv" class="animate-bottom">
 		<br>
-		<h2 style="color:#886D2C;">Congratulations,Ticket booked!</h2>
+		<h2 style="color:#886D2C;">Felicidades, compra realizada con éxito!</h2>
 		<br>
-		<h2 style="color:#886D2C;">We have sent you email regarding your booking.</h2>
+		<h2 style="color:#886D2C;">Hemos enviado a su correo los códigos.</h2>
 
-
-		<div class='food2'>
-			<img src='images/food.gif' height='400px' width='1200px'>
-			<br><br><br>
-		</div>
-
-		<img src="images/booked.png" class='booked'>
+		<img src="images/reservado.png" class='booked'>
 
 		<center class="receipt-holder">
 
@@ -96,7 +82,7 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 
 				<tr>
 					<td>
-						<b>DATE</b>
+						<b>Fecha:</b>
 					</td>
 					<td>
 						<?php echo date("d-m-Y"); ?>
@@ -105,7 +91,7 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 
 				<tr>
 					<td>
-						<b>SHOWTIME</b>
+						<b>Horario:</b>
 					</td>
 					<td>
 						<?php echo $_SESSION['timer']; ?>
@@ -114,7 +100,7 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 
 				<tr>
 					<td>
-						<b>MOVIE</b>
+						<b>Película:</b>
 					</td>
 					<td>
 						<?php echo $_SESSION['movie_n']; ?>
@@ -122,7 +108,7 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 				</tr>
 				<tr>
 					<td>
-						<b>THEATRE</b>
+						<b>Cine:</b>
 					</td>
 					<td>
 						<?php echo $_SESSION['theatre_n']; ?>
@@ -131,7 +117,7 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 
 				<tr>
 					<td>
-						<b>LOCATION</b>
+						<b>Lugar:</b>
 					</td>
 					<td>
 						<?php echo $_SESSION['location']; ?>
@@ -140,7 +126,7 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 
 				<tr>
 					<td>
-						<b>SEATS</b>
+						<b>Asientos:</b>
 					</td>
 					<td>
 						<?php
@@ -154,7 +140,7 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 				</tr>
 
 			</table>
-			<button class="book" onclick="location.href='booking.php'"> Book Another Ticket?</button>
+			<button class="book" onclick="location.href='booking.php'">Reservar más asientos?</button>
 		</center>
 
 	</div>

@@ -361,7 +361,7 @@ $row_count=mysqli_num_rows($result);
 
 
 
-<div class="book" style="background-color:#0b243d" ><center><form action="booking.php" method="post"> <input type="submit" name="submit" value="Book Now"> </form></center>
+<div class="book" style="background-color:#0b243d" ><center><form action="booking.php" method="post"> <input type="submit" name="submit" value="Comprar"> </form></center>
 </div>
 
 <div class="book1" style="background-color:#0b243d ;margin-bottom:100px;"><center><a href="upcomingmovies.php"><input type="submit" name="submit" value="Upcoming Movies"></center></a></center>

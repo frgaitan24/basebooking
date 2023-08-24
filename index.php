@@ -2,7 +2,7 @@
 	session_start();
 	
 	if(isset($_SESSION['name'])){
-		header('location:userdashboard.php');
+		header('location:bienvenida.php');
 	}
 
 ?>
@@ -14,7 +14,7 @@
 	<meta charset="UTF-8">
 		<title>Login Page</title>
 		<link href="../css/animate.css" type='text/css' rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="../css/indexstyles.css">
+		<link rel="stylesheet" type="text/css" href="css/indexstyles.css">
 </head>
 <body >
 	<div class="title">
@@ -61,7 +61,7 @@
 		{
 			?>
 			<script>
-			alert("Invalid Username");
+			alert("Usuario inválido");
 			</script>
 			<?php
 		}
@@ -79,7 +79,7 @@
 		
 			$_SESSION['name']=$un;
 			$_SESSION['email']=$em;
-			header('location:userdashboard.php');
+			header('location:bienvenida.php');
 		
 			}
 			
@@ -87,7 +87,7 @@
 			{
 				?>
 			<script>
-			alert("Invalid Password");
+			alert("Constraseña inválida");
 			</script>
 			<?php
 				

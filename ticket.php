@@ -44,7 +44,7 @@ else{ header('location:booking.php');}
 <html>
 
 <head>
-    <title>Seat Selection</title>
+    <title>Asignación de asientos</title>
    
     <script>
 	
@@ -76,7 +76,7 @@ else{ header('location:booking.php');}
 				<td width="15%" >
 					<center>
 					<h4>
-                     Movie: <?php
+                     Película: <?php
                        
 						echo $_SESSION['movie_n'];
 					 ?>               
@@ -86,7 +86,7 @@ else{ header('location:booking.php');}
                 </td>
                 <td width="15%" >  
                       <center>  <h6>
-                        Theatre: <?php echo 
+                        Cine: <?php echo 
                         $_SESSION['theatre_n']; 
                         ?>
                         </h6>
@@ -96,7 +96,7 @@ else{ header('location:booking.php');}
 				
 				<td width="15%" >  
                       <center>  <h6>
-                        Location: <?php echo 
+                        Lugar: <?php echo 
                         $_SESSION['location']; 
                         ?>
                         </h6>
@@ -106,20 +106,20 @@ else{ header('location:booking.php');}
 				
                 <td width="15%" >
                  <center>   <h4>
-                    Time: <?php 
+                    Hora: <?php 
                     echo $_SESSION['timer']; 
                     ?>
                     </h4></center>
                 </td>
                 <td width="20%" >
-                  <center>  <h6>Silver Price:
+                  <center>  <h6>Precio regular:
                         <?php
                          echo $row['ticket_rate_Silver']; 
                         ?>
                      </h6> </center>
                  </td>
                  <td width="20%" >
-                    <center> <h6>Gold Price:
+                    <center> <h6>Precio VIP:
                         <?php 
                         echo $row['ticket_rate_Gold']; 
                         ?> </center>
@@ -141,22 +141,22 @@ else{ header('location:booking.php');}
             <div class="inputForm">
                 <div class="mr_agilemain">
                     <div class="agileits-right">
-                        <label> Number of Seats
+                        <label>Número de asientos
                             <span>*</span>
                         </label>
                         <input type="number" id="Numseats"  required min="1">
                     </div>
                 </div>
-                <button onclick="takeData()">Start Selecting</button>
+                <button onclick="takeData()">Empezar a seleccionar</button>
             </div>
             <!-- //input fields -->
             <!-- seat availabilty list -->
             <ul class="seat_w3ls">
-                <li class="smallBox greenBox">Booked Seat</li>
+                <li class="smallBox greenBox">Asiento vendidos</li>
 
     
 
-                <li class="smallBox emptyBox">Empty Seat</li>
+                <li class="smallBox emptyBox">Asientos vacíos</li>
             </ul>
             <!-- seat availabilty list -->
             <!-- seat layout -->
@@ -182,7 +182,7 @@ else{ header('location:booking.php');}
                         <td>12</td>
                     </tr>
 		
-					<tr><td style="color:#886D2C" >GOLD</td></tr>
+					<tr><td style="color:#886D2C" >VIP</td></tr>
 					
                     <tr>
                         <td>A</td>
@@ -390,7 +390,7 @@ else{ header('location:booking.php');}
                     </tr>
 
                     <tr class="seatVGap"></tr>
-					<tr><td style="color:#886D2C">SILVER</td></tr>
+					<tr><td style="color:#886D2C">REGULAR</td></tr>
 
                     <tr>
                         <td>F</td>
@@ -599,11 +599,11 @@ else{ header('location:booking.php');}
                 </table>
 
                 <div class="screen">
-                    <h2 class="wthree">Screen this way</h2>
+                    <h2 class="wthree">Ubicación de la pantalla</h2>
                 </div>
 				
 				
-				<input type="submit" class='seat_submit' name='submit_seat' value="Confirm Selection" >
+				<input type="submit" class='seat_submit' name='submit_seat' value="Confirmar" >
 				</form>
             </div>            
         </div>
@@ -643,9 +643,9 @@ else{ header('location:booking.php');}
                 <table class="Displaytable w3ls-table" width="100%">
                     <tr>
                         
-                        <th>Number of Seats</th>
-                        <th>Seats</th>
-                        <th>Amount</th>
+                        <th>Cantidad de asientos</th>
+                        <th>Asientos seleccionados</th>
+                        <th>Total</th>
                     </tr>
                     <tr>
                         
@@ -667,7 +667,7 @@ else{ header('location:booking.php');}
 					
                 </table>
 				
-				<center><a class='pay' href="receipt.php">Pay <?php echo $amt;?></a> </center> 
+				<center><a class='pay' href="receipt.php">Pagar <?php echo $amt;?></a> </center> 
 				</form>
 				
             </div>
@@ -692,26 +692,18 @@ else{ header('location:booking.php');}
 
         function takeData() {
             if ($("#Numseats").val().length == 0) {
-                alert("Please Enter Number of Seats");
+                alert("Primero seleccione el número de asientos!");
 				}
 			
 			if ($("#Numseats").val() > <?php echo $_SESSION['seats'] ?>) {
-                alert("Seats are not available.");
+                alert("Asientos no disponibles.");
 				}
 			else
 				{
 				$('input[type=checkbox]').not(':checked').prop("disabled", false);
 	
                 $(".inputForm *").prop("disabled", false);
-				$(".seat_submit*").prop("disabled", true);
-
-                document.getElementById("notification").innerHTML =
-                    "<b style='padding:10px 10px 10px 10px;background:white;color:red; '>Please select Seats NOW!</b>";
-					
-					
-				
-
-					
+				$(".seat_submit*").prop("disabled", true);	
 				}
 		}
 		
