@@ -29,7 +29,6 @@ session_start();
         <textarea id="reviewText" cols="30" rows="10" placeholder="Escriba su reseña aqui..."></textarea>
         <div class="grupo-btns">
             <button type="submit" class="btn-publicar">Publicar</button>
-            <button class="btn-borrar">Borrar</button>
         </div>
     </form>
     <div id="reviewContainer"></div>    

@@ -660,7 +660,7 @@ else{ header('location:booking.php');}
 					
                 </table>
 				
-				<center><a class='pay' href="receipt.php">Pagar <?php echo $amt;?></a> </center> 
+				<center><a class='pay' href="receipt.php">Reservar por un total de: <?php echo $amt;?> colones</a> </center> 
 				</form>
 				
             </div>
