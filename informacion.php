@@ -30,7 +30,7 @@ $_SESSION['timer'] = null;
                     nuestro país.</p>
 
                 <div id="historia">
-                    <h3>Nuestra historia</h3>
+                    <center><h3>Nuestra historia</h3></center>
                     <p>Fuimos fundados en 2022 por un grupo de emprendedores apasionados por el cine, la tecnología y la
                         innovación. Todos con amplia experiencia en la industria del entretenimiento, unimos nuestras
                         habilidades y conocimientos para crear una nueva propuesta de cine en Costa Rica. Invertimos en
@@ -41,9 +41,9 @@ $_SESSION['timer'] = null;
             </div>
         </div>
 
-        <div id="pie-pagina">
+        <center><div id="pie-pagina">
             Derechos reservados &copy; Nuevo Cine 2023
-        </div>
+        </div></center>
 
     </div>
     <div id="footerContainer"></div>
