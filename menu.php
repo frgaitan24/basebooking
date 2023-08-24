@@ -48,7 +48,7 @@ $_SESSION['timer'] = null;
                                 </li>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="menu_Comidas.php">Comidas</a>
+                                    <a class="nav-link" href="./HTML/menu_comidas.html">Comidas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="resenas.php">Reseñas</a>

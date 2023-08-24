@@ -1,3 +1,46 @@
+
+const pintarTabla = productos => {
+
+  // Limpiar tabla
+  document.getElementById('productos').innerHTML = '';
+
+  // Recorrer y crear filas
+  productos.forEach(p => {
+    
+    // Crear fila
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${p.id}</td>
+      <td>${p.nombre}</td>
+      <td>${p.descripcion}</td>
+      <td>${p.costo}</td>
+    `;
+
+    // Agregar fila a tabla
+    document.getElementById('productos').appendChild(row);
+
+  });
+
+}
+
+// Obtener comidas
+// Al cargar el DOM
+document.addEventListener('DOMContentLoaded', async () => {
+
+  const productos = await obtenerProductos();
+  
+  pintarTabla(productos);
+
+});
+
+const obtenerProductos = async () => {
+
+  const resp = await fetch('../PHP/menu_comidas.php');
+  return await resp.json();
+
+}
+              
+
 // Insertar comida
 const insertForm = document.getElementById('insertForm');
 insertForm.addEventListener('submit', e => {
@@ -12,56 +55,70 @@ insertForm.addEventListener('submit', e => {
     body: new FormData(insertForm)
   })
   .then(res => res.text())
-  .then(data => {
+  .then(async data => {
     console.log(data);
+    const productos = await obtenerProductos();
+  
+  // Pintar tabla
+    pintarTabla(productos);
     insertForm.reset();
+    
     // Manejar respuesta...
   })
   .catch(err => console.error(err));
 
 });
-
-/*async function obtenerProductos() {
-    const response = await fetch('/api/menu_comidas.php');
-    return await response.json();
-  }
-  
-  // Poblar selects
-  async function populardSelects() {
-    const productos = await obtenerProductos(); 
-  
-    const updateSelect = document.getElementById('productoUpdate');
-    const deleteSelect = document.getElementById('productoDelete');
-  
-    productos.forEach(p => {
-      const option1 = document.createElement('option');
-      option1.value = p.id;
-      option1.textContent = p.nombre;
-      updateSelect.appendChild(option1);
-  
-      // Crear opciones para deleteSelect también
-    });
-  }
 
 // Actualizar comida
 const updateForm = document.getElementById('updateForm');
-insertForm.addEventListener('submit', e => {
+updateForm.addEventListener('submit', e => {
   e.preventDefault();
+// Obtener valor del input
+const productoId = document.getElementById('productoId').value;
+const precioUpdate = document.getElementById('precioUpdate').value;
+
+fetch('../PHP/menu_comidas.php', {
+  method: 'POST',
+  body: new FormData(updateForm)
+})
+.then(res => res.text())
+.then(async data => {
+  console.log(data);
+  const productos = await obtenerProductos();
   
-  const nombre = document.getElementById('nombre').value;
-  const precio = document.getElementById('precio').value;
+  // Pintar tabla
+  pintarTabla(productos);
+  updateForm.reset();
+  // Manejar respuesta...
 
-  fetch('../PHP/menu_comidas.php', {
-    method: 'POST',
-    body: new FormData(insertForm)
-  })
-  .then(res => res.text())
-  .then(data => {
-    console.log(data);
-    insertForm.reset();
-    // Manejar respuesta...
-  })
-  .catch(err => console.error(err));
-
+})
+.catch(err => console.error(err));
 });
-// Eliminar comida*/
+
+
+// Eliminar comida
+const deleteForm = document.getElementById('deleteForm');
+deleteForm.addEventListener('submit', e => {
+  e.preventDefault();
+// Obtener valor del input
+const productoId = document.getElementById('productoId').value;
+
+fetch('../PHP/menu_comidas.php', {
+  method: 'POST',
+  body: new FormData(deleteForm)
+})
+.then(res => res.text())
+.then(async data => {
+  console.log(data);
+  const productos = await obtenerProductos();
+  
+  // Pintar tabla
+  pintarTabla(productos);
+  deleteForm.reset();
+  // Manejar respuesta...
+})
+.catch(err => console.error(err));
+});
+
+
+
