@@ -97,3 +97,7 @@ h2{
 .loginbox a:hover{
 	color:#ffc107;
 }
+
+#Commentarios-container{
+	background-color: rgb(74, 72, 72);
+}

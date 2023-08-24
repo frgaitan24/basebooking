@@ -54,7 +54,6 @@ $_SESSION['timer'] = null;
                         <div class="card-body">
                             <h6 class="card-title">Barbie</h6>
                             <p class="card-text">Barbie</p>
-                            <a href="#" class="btn btn-primary">Ver Detalles</a>
                             <a href="booking.php" class="btn btn-primary">Comprar</a>
 
                         </div>
@@ -66,7 +65,6 @@ $_SESSION['timer'] = null;
                         <div class="card-body">
                             <h6 class="card-title">Oppenheimer</h6>
                             <p class="card-text">Oppenheimer</p>
-                            <a href="#" class="btn btn-primary">Ver Detalles</a>
                             <a href="booking.php" class="btn btn-primary">Comprar</a>
 
                         </div>
@@ -78,34 +76,17 @@ $_SESSION['timer'] = null;
                         <div class="card-body">
                             <h6 class="card-title">Ritos diabólicos</h6>
                             <p class="card-text">Ritos diabólicos</p>
-                            <a href="#" class="btn btn-primary">Ver Detalles</a>
                             <a href="booking.php" class="btn btn-primary">Comprar</a>
 
                         </div>
                     </div>
                 </div>
-
-                <!-- <h4>Estreno<h4><br> -->
-                <!--<h6>Un detective al borde de la jubilaciónjunto con un profesor de estudios africanos<br>
-                                   buscan localizar a un asesino en serie que está realizando la antigua práctica <br>
-                                   de magia negra de Muti.</h6> <br><br>
-                                 
-                                   <h6>Créditos y reparto</h6><br>
-                                   <h6>ActoresCole Hauser, Julie Lott, Morgan Freeman</h6><br>
-                                   <h6>DirectoresGeorge Gallo</h6></p>
-                                    <a href="#" class="btn btn-primary">Ver Detalles</a>-->
             </div>
         </div>
         </div>
         </div>
         </div>
     </section>
-
-    <!-- <section id="proximos-estrenos" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center">Próximos Estrenos</h2>
-        </div>
-    </section> -->
 
     <div id="footerContainer"></div>
 

@@ -20,10 +20,9 @@ $_SESSION['timer'] = null;
 
 <h1>¡Bienvenido al menú de reseñas para los usuarios!</h1>
 
-<p>A continuación los usuarios podran dejar sugerencias para la mejora continua de nuestra pagina web.</p>
+<p>A continuación los usuarios podran dejar sugerencias anonimas para la mejora continua de nuestra pagina web.</p>
 
 <div id="seccion-reseñas">
-    <h3>Commentarios:</h3>
     <div id="Commentarios-container"></div>
 </div>
 
@@ -33,7 +32,6 @@ $_SESSION['timer'] = null;
         <textarea id="reviewText" cols="30" rows="10" placeholder="Escriba su reseña aqui..."></textarea>
         <div class="grupo-btns">
             <button type="submit" class="btn-publicar">Publicar</button>
-            <button class="btn-borrar">Borrar</button>
         </div>
     </form>
     <div id="reviewContainer"></div>    
