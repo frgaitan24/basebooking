@@ -67,9 +67,9 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 
 	<div style="display:none;" id="myDiv" class="animate-bottom">
 		<br>
-		<h2 style="color:#886D2C;">Felicidades, compra realizada con éxito!</h2>
+		<h2 style="color:#886D2C;">Reservación realizada con éxito!</h2>
 		<br>
-		<h2 style="color:#886D2C;">Hemos enviado a su correo los códigos.</h2>
+		<h2 style="color:#886D2C;">Proceda a realizar su pago.</h2>
 
 		<img src="images/reservado.png" class='booked'>
 
@@ -138,7 +138,7 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 				</tr>
 
 			</table>
-			<button class="book" onclick="location.href='booking.php'">Reservar más asientos?</button>
+			<button class="book" onclick="location.href='pasarela_pagos.php'">Método de pago</button>
 		</center>
 
 	</div>
