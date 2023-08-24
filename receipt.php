@@ -42,15 +42,30 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 
 	<link rel="stylesheet" type="text/css" href="css/receiptstyle.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/StyleIndex.css">
+    <link rel="stylesheet" type="text/css" href="css/StyleIndex.css">
 </head>
 
 <body onload="myFunction()">
 
 
 
-	<div class='navbar'></div>
-	<div id="menuContainer"></div>
+	<div class='navbar'>
+		<ul>
+
+			<li><a class="active" href="home.php">Home</a></li>
+
+			<?php if (isset($_SESSION['name'])) { ?>
+				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
+						onclick="document.location.href='userlogout.php'">Salir</button></li>
+			<?php } else { ?>
+				<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'
+						onclick="document.location.href='index.php'">Loguearse</button></li>
+			<?php } ?>
+
+
+
+		</ul>
+	</div>
 
 	<div id="loader"></div>
 
@@ -147,8 +162,5 @@ if (isset($_SESSION['seatings']) && isset($_SESSION['theatre_n']) && isset($_SES
 	</script>
 
 </body>
-<div id="footerContainer"></div>
-<script src="JS/menu.js"></script>
-<script src="JS/footer.js"></script>
 
 </html>
