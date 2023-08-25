@@ -67,13 +67,13 @@ $_SESSION['timer'] = null;
                     </div>
                     <div class="inputBox">
                         <span>Mes exp :</span>
-                        <input type="text" placeholder="ejemplo: Enero" name="mesexpiracion" required>
+                        <input type="text" placeholder="formato: 00" name="mesexpiracion" required>
                     </div>
 
                     <div class="flex">
                         <div class="inputBox">
                             <span>Año exp :</span>
-                            <input type="text" placeholder="ejemplo: 2022" name="fechaexpiracion" required>
+                            <input type="text" placeholder="formato: YYYY" name="fechaexpiracion" required>
                         </div>
                         <div class="inputBox">
                             <span>CVV :</span>

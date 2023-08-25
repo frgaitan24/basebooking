@@ -1,6 +1,6 @@
 <?php
 
-$enlace = mysqli_connect("localhost", "root", "", "cinelitas2");
+$enlace = mysqli_connect("localhost", "root", "Karaoke.10", "cinelitas");
 //$enlace = mysqli_connect($servidor, $usuario, $clave, $basedatos);
 
 //Verificar conexion

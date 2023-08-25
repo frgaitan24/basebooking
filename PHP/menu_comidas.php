@@ -1,6 +1,6 @@
 
 <?php
-$conn = mysqli_connect("localhost", "root", "", "cinelitas");
+$conn = mysqli_connect("localhost", "root", "Karaoke.10", "cinelitas");
 
 
 

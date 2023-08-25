@@ -3,11 +3,6 @@
 function agregarEventosHover() {
     const cards = document.querySelectorAll('.card');
 
-   /* cards.addEventListener('click', function (event) {
-        event.preventDefault();
-        location.href="../HTML/seleccion_asientos.html";
-    });*/
-
     cards.forEach((card) => {
         card.addEventListener('mouseover', () => {
             card.style.transform = 'translateY(-10px)';
